@@ -64,7 +64,7 @@ define android::package($type, $expected_path = undef) {
       }
     }
   } else {
-    $creates = "${android::installdir}/${expected_path}"
+    $creates = "${android::paths::sdk_home}/${expected_path}"
   }
 
   file { "${android::installdir}/expect-install-${title}":
